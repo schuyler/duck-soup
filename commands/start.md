@@ -63,7 +63,7 @@ NEVER SKIP ANY STEPS IN THE WORKFLOW.
 
 ### 1. GATHER REQUIREMENTS
 
-**a. Understand your job: gather requirements from the user, not solve the problem yet**
+**a. Understand your job: gather requirements from the user**
    - Focus on understanding what the user needs
    - Don't jump to implementation ideas or solutions
 
@@ -85,7 +85,7 @@ NEVER SKIP ANY STEPS IN THE WORKFLOW.
 ### 2. PLAN
 
 **a. MANDATORY GATE: Ask user for permission to consult Groucho**
-   - State what you'll ask him: "I need Groucho to check for existing patterns and help formulate an implementation plan"
+   - Explain why you want Groucho's help
    - List what context you'll provide: requirements, documentation links from Phase 1, technical constraints, user preferences
 
 **b. If approved, consult Groucho**
@@ -96,18 +96,16 @@ NEVER SKIP ANY STEPS IN THE WORKFLOW.
    - Present the complete implementation plan
    - Explain the approach and reasoning
 
-**d. Write plan to .claude/PLAN.md**
+**d. Validate plan against workflow phases**
+   - THINK HARD about the plan and which steps belong in the implementation phase, as opposed to testing or documentation.
+   - If plan violates phase boundaries, correct it before presenting to user
+
+**e. Write plan to .claude/PLAN.md**
    - Use `rm -f` to attempt to remove the file if it already exists
    - Write the entire plan, omitting nothing
 
-**e. Validate plan against workflow phases**
-   - Ensure implementation steps contain only code/config files, not documentation (README, guides) or testing
-   - If plan violates phase boundaries, correct it before presenting to user
-
-**f. Request user confirmation**
+**f. STOP and wait for user confirmation**
    - Explicitly ask: "Please confirm this plan before I proceed to implementation"
-
-**g. STOP and wait for user confirmation**
    - Do not proceed to Phase 3 until user explicitly confirms
    - Use Phase Transition Protocol when moving to Phase 3
 
@@ -132,7 +130,7 @@ NEVER SKIP ANY STEPS IN THE WORKFLOW.
 ### 4. REVIEW
 
 **a. MANDATORY GATE: Ask user for permission to consult Chico**
-   - State what you'll ask him: "I need Chico to review the completed implementation"
+   - Explain why you want Chico's help
    - List what you'll have him review: all code written during Phase 3
 
 **b. If approved, consult Chico**
@@ -151,7 +149,7 @@ NEVER SKIP ANY STEPS IN THE WORKFLOW.
 ### 5. VERIFY
 
 **a. MANDATORY GATE: Ask user for permission to consult Zeppo**
-   - State what you'll ask him: "I need Zeppo to provide testing/debugging guidance"
+   - Explain why you want Zeppo's help
    - List what you need verified: the implementation meets requirements and works correctly
 
 **b. If approved, consult Zeppo**
@@ -177,15 +175,11 @@ NEVER SKIP ANY STEPS IN THE WORKFLOW.
 
 ### 6. DOCUMENT
 
-**a. Ask user if they want documentation updated**
-   - Determine if the feature, fix, or change should be documented
-   - If no documentation needed, skip to Phase 7
-
-*b. MANDATORY GATE: Ask user for permission to consult Harpo**
-   - State what you'll ask him: "I need Harpo to update project documentation"
+**a. MANDATORY GATE: Ask user for permission to consult Harpo**
+   - Explain why you want Harpo's help
    - List what documentation needs updating: [specific docs based on the work completed]
 
-**c. If approved, consult Harpo**
+**b. If approved, consult Harpo**
    - Have him update relevant documentation (README, user guides, API docs, etc.)
    - Ensure documentation accurately reflects the changes made
 
@@ -196,12 +190,13 @@ NEVER SKIP ANY STEPS IN THE WORKFLOW.
    - Format: "Would you like me to record learnings from this session? This helps identify instruction gaps over time."
 
 **b. If approved, create structured session file**
-   - File location: `.claude/sessions/YYYY-MM-DD-HH-MM-taskname.md`
+   - File location: `.claude/sessions/YYYYMMDD-HHMM-taskname.md`
+   - Make sure the timestamp is in the user's current timezone.
    - See existing session files for format examples
 
 **c. Required session file sections:**
    - **Task Summary**: Brief description of what was accomplished
-   - **User Corrections**: List each correction with your reasoning and gap type
+   - **User Corrections**: List each time the user corrected you. Explain your reasoning and identify the gap.
    - **Project Preferences Revealed**: Any patterns or preferences discovered
    - **Gates Triggered**: Which gates were used during this session
    - **Workflow Observations**: Notes on what worked well or needs improvement
@@ -210,7 +205,10 @@ NEVER SKIP ANY STEPS IN THE WORKFLOW.
    - **coverage**: No instruction existed for this situation
    - **effectiveness**: Instruction exists but failed to prevent the issue
    - **clarity**: Instruction was misunderstood or ambiguous
-   - **none**: No gap, you simply made an error
+   - **error**: No gap, you simply made an error
+
+Once the user has confirmed that Phase 7 is complete (or skipped), ask if you
+should clean up the REQUIREMENTS.md, PLAN.md, and TESTING.md files.
 
 ## Examples of Proper Step Granularity
 
