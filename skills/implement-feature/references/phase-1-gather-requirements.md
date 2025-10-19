@@ -1,0 +1,67 @@
+# Phase 1: GATHER REQUIREMENTS
+
+## Objective
+
+Understand what the user needs before jumping to solutions.
+
+## Why This Exists
+
+Without clear requirements, you can't build the right thing. This prevents building the wrong feature, missing requirements, and having no success criteria.
+
+## Protocol
+
+1. **Ask clarifying questions** (2-4 at a time)
+   - What is the user trying to achieve?
+   - What specific functionality is needed?
+   - Are there constraints or preferences?
+   - What does success look like?
+
+2. **Confirm understanding**
+   - Summarize what you've understood
+   - Ask: "Is there anything else?" and "Are there edge cases?"
+
+3. **Create session directory**
+   ```bash
+   scripts/init_session.sh <feature-slug>
+   ```
+   Use lowercase-with-hyphens (e.g., `user-authentication`)
+
+4. **Write complete requirements** to `docs/sessions/YYYYMMDD-HHMM-<slug>/REQUIREMENTS.md`
+   - Summary (1-2 sentences)
+   - Detailed requirements (numbered)
+   - Constraints
+   - User preferences
+   - Success criteria (checkboxes)
+   - Documentation links (if fetched)
+
+5. **Store documentation links**
+   If you fetch API docs or references, include them in REQUIREMENTS.md. These MUST be passed to Groucho in Phase 2.
+
+6. **Phase Transition Protocol**
+   ```
+   WORKFLOW TRANSITION: GATHER REQUIREMENTS → PLAN
+   - Gates cleared:
+     ✓ Asked clarifying questions
+     ✓ Confirmed understanding
+     ✓ Created session directory
+     ✓ Wrote complete requirements
+     ✓ Stored documentation links (if any)
+   - Waiting for: nothing
+   ```
+
+## Critical Anti-Patterns
+
+**❌ Assuming requirements are obvious**
+
+Don't assume the approach. User says "add authentication" - ask about method, features, constraints first.
+
+**❌ Incomplete requirements**
+
+"Add CSV export" is too vague. Include specific functionality, constraints, success criteria, edge cases.
+
+## Key Takeaways
+
+- Focus on needs, not solutions
+- Ask questions incrementally
+- Document everything
+- Store documentation links for Groucho
