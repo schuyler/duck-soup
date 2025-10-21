@@ -42,10 +42,11 @@ WORKFLOW TRANSITION: [current] → [next]
 
 ```
 docs/sessions/YYYYMMDD-HHMM-<slug>/
-├── REQUIREMENTS.md  (Phase 1)
-├── PLAN.md         (Phase 2)
-├── TESTING.md      (Phase 5)
-└── REFLECTION.md   (Phase 7)
+├── REQUIREMENTS.md    (Phase 1)
+├── PLAN.md           (Phase 2)
+├── IMPLEMENTATION.md (Phase 3)
+├── TESTING.md        (Phase 5)
+└── REFLECTION.md     (Phase 7)
 ```
 
 Initialize: `scripts/init_session.sh <feature-slug>`
@@ -163,13 +164,20 @@ If you skip a gate:
 - `phase-5-verify.md`
 - `phase-6-document.md`
 - `phase-7-reflect.md`
+- `session-resumption.md`
+
+**assets/**
+- Templates for session phase files
 
 Load phase references only when entering that phase.
 
 ## Starting a Task
 
-When user requests feature implementation:
+**If user provides session slug to resume:**
+- Load `references/session-resumption.md`
+- Follow resumption protocol
 
+**If user requests new feature implementation:**
 1. **Do not attempt to solve problems yet**
 2. Acknowledge you'll use the 7-phase workflow
 3. List all 7 phases

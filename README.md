@@ -35,7 +35,7 @@ Start the development workflow with:
 /dev:start Add user authentication with JWT tokens
 ```
 
-The `/dev:start` command runs a structured workflow starting with requirements gathering and continuing through documentation and feedback.
+The `/dev:start` command runs a structured workflow starting with requirements gathering and continuing through documentation and feedback. To resume an interrupted session, mention the session slug (e.g., "continue session-resumption").
 
 ## Your All-Star Development Team
 

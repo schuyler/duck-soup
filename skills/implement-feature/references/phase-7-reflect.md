@@ -16,8 +16,9 @@ Session reflections identify instruction gaps, reveal project preferences, and e
    This helps identify instruction gaps over time."
    ```
 
-2. **If approved, create REFLECTION.md**
-   - File location: `docs/sessions/YYYYMMDD-HHMM-<slug>/REFLECTION.md`
+2. **If approved, read template and create REFLECTION.md**
+   - Read `assets/REFLECTION.md` as a guide
+   - Write to `docs/sessions/YYYYMMDD-HHMM-<slug>/REFLECTION.md`
    - Use user's current timezone for timestamp
 
 3. **Required sections**
@@ -33,9 +34,14 @@ Session reflections identify instruction gaps, reveal project preferences, and e
    - **clarity**: Instruction was misunderstood or ambiguous
    - **error**: No gap, you simply made an error
 
-5. **Ask about cleanup**
+5. **Phase Transition Protocol**
    ```
-   "Should I clean up REQUIREMENTS.md, PLAN.md, and TESTING.md?"
+   WORKFLOW TRANSITION: REFLECT → COMPLETE
+   - Gates cleared:
+     ✓ Suggested recording learnings
+     ✓ Created REFLECTION.md from template (if approved)
+     ✓ Wrote reflection to REFLECTION.md
+   - Session complete
    ```
 
 ## Critical Anti-Patterns

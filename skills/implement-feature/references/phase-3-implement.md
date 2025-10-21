@@ -44,17 +44,25 @@ Step 5: Add JWT token generation function (~40 lines)
 
 ## After All Steps Complete
 
-- Offer to add code comments (if appropriate)
-- Do NOT run tests (Phase 5) or update docs (Phase 6)
-- Use Phase Transition Protocol
+1. **Read template and create IMPLEMENTATION.md**
+   - Read `assets/IMPLEMENTATION.md` as a guide
+   - Write implementation summary to `docs/sessions/YYYYMMDD-HHMM-<slug>/IMPLEMENTATION.md`
+   - Include: Completed steps, files changed, code comments status, deviations from plan
+
+2. **Offer to add code comments** (if appropriate)
+
+3. **Do NOT run tests (Phase 5) or update docs (Phase 6)**
+
+4. **Use Phase Transition Protocol**
 
 ```
 WORKFLOW TRANSITION: IMPLEMENT → REVIEW
 - Gates cleared:
-  ✓ Completed all implementation steps
-  ✓ Each step confirmed by user
-  ✓ Code comments added (if requested)
-  ✓ No testing or documentation mixed in
+     ✓ Completed all implementation steps
+     ✓ Each step confirmed by user
+     ✓ Created IMPLEMENTATION.md from template
+     ✓ Code comments added (if requested)
+     ✓ No testing or documentation mixed in
 - Waiting for: nothing
 ```
 

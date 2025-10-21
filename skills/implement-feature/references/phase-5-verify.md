@@ -29,10 +29,10 @@ Zeppo prevents: shipping untested code, missing edge cases, undiscovered bugs, n
    - Edge cases to test
    - Performance considerations
 
-4. **Write verification plan** to `docs/sessions/YYYYMMDD-HHMM-<slug>/TESTING.md`
-   - Complete test plan
-   - Automated vs manual tests
-   - Expected results
+4. **Read template and create TESTING.md**
+   - Read `assets/TESTING.md` as a guide
+   - Write verification plan to `docs/sessions/YYYYMMDD-HHMM-<slug>/TESTING.md`
+   - Include: Test strategy, automated tests, manual verification steps, edge cases, test results
 
 5. **Execute tests**
    - Run automated tests
@@ -51,6 +51,7 @@ Zeppo prevents: shipping untested code, missing edge cases, undiscovered bugs, n
    - Gates cleared:
      ✓ Asked permission to consult Zeppo
      ✓ Received testing strategy
+     ✓ Created TESTING.md from template
      ✓ Wrote verification plan to TESTING.md
      ✓ Executed all tests
      ✓ All tests passed

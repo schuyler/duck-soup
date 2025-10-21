@@ -26,13 +26,10 @@ Without clear requirements, you can't build the right thing. This prevents build
    ```
    Use lowercase-with-hyphens (e.g., `user-authentication`)
 
-4. **Write complete requirements** to `docs/sessions/YYYYMMDD-HHMM-<slug>/REQUIREMENTS.md`
-   - Summary (1-2 sentences)
-   - Detailed requirements (numbered)
-   - Constraints
-   - User preferences
-   - Success criteria (checkboxes)
-   - Documentation links (if fetched)
+4. **Read template and create REQUIREMENTS.md**
+   - Read `assets/REQUIREMENTS.md` as a guide
+   - Write complete requirements to `docs/sessions/YYYYMMDD-HHMM-<slug>/REQUIREMENTS.md`
+   - Include: Summary, detailed requirements, constraints, user preferences, success criteria, documentation links (if fetched)
 
 5. **Store documentation links**
    If you fetch API docs or references, include them in REQUIREMENTS.md. These MUST be passed to Groucho in Phase 2.
@@ -44,6 +41,7 @@ Without clear requirements, you can't build the right thing. This prevents build
      ✓ Asked clarifying questions
      ✓ Confirmed understanding
      ✓ Created session directory
+     ✓ Created REQUIREMENTS.md from template
      ✓ Wrote complete requirements
      ✓ Stored documentation links (if any)
    - Waiting for: nothing

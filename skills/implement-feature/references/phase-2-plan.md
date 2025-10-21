@@ -41,7 +41,9 @@ Groucho prevents: reinventing solutions, inconsistent code structure, architectu
 
    Correct any violations before presenting to user.
 
-5. **Write plan** to `docs/sessions/YYYYMMDD-HHMM-<slug>/PLAN.md`
+5. **Read template and create PLAN.md**
+   - Read `assets/PLAN.md` as a guide
+   - Write complete plan to `docs/sessions/YYYYMMDD-HHMM-<slug>/PLAN.md`
 
 6. **GATE: Wait for user confirmation**
    ```
@@ -57,6 +59,7 @@ Groucho prevents: reinventing solutions, inconsistent code structure, architectu
      ✓ Consulted Groucho with complete context
      ✓ Presented complete plan
      ✓ Validated phase boundaries
+     ✓ Created PLAN.md from template
      ✓ Wrote plan to PLAN.md
      ✓ Received user confirmation
    - Waiting for: nothing
