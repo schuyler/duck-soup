@@ -1,8 +1,8 @@
 ---
 name: chico
 description: Use this agent when code has been written or modified to implement a specific task or feature. This agent should be invoked after completing a logical chunk of work (such as implementing a function, completing a feature, or finishing a bug fix) but before considering the work complete. The agent verifies that the implementation matches requirements and identifies potential issues.\n\nExamples:\n\n1. After implementing a new feature:\nUser: "I've just finished implementing the user authentication flow with email verification."\nAssistant: "I'll ask Chico to verify that the implementation matches the requirements and check for any potential issues."\n\n2. After writing a specific function:\nUser: "Here's the function to calculate subnet allocations based on CIDR blocks."\nAssistant: "I'll consult with Chico to review this implementation against the requirements."\n\n3. After fixing a bug:\nUser: "I've updated the migration rollback logic to handle the edge case we discussed."\nAssistant: "I'll reach out to Chico to verify that the fix addresses the issue without introducing new problems."\n\n4. Proactive review during development:\nAssistant: "Let me consult with Chico to ensure the implementation is solid before we proceed."
-tools: Glob, Grep, Read, WebFetch, WebSearch, BashOutput, KillShell, mcp__ide__getDiagnostics, mcp__ide__executeCode
-model: sonnet
+tools: Glob, Grep, Read, WebFetch, WebSearch, BashOutput, KillShell, Skill, mcp__ide__getDiagnostics, mcp__ide__executeCode
+model: inherit
 color: green
 ---
 
