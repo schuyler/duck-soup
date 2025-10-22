@@ -10,14 +10,11 @@ Chico prevents: shipping bugs, missing requirements, code quality issues, testin
 
 ## Protocol
 
-1. **GATE: Ask permission to consult Chico**
-   ```
-   "May I consult Chico to review the implementation? I'll have him review:
-   - All code from Phase 3
-   - Verification against REQUIREMENTS.md
-   - Code quality and best practices
-   - Potential bugs or issues"
-   ```
+1. **Get user approval to consult Chico**
+   - Mark "Get user approval to consult Chico" as in_progress
+   - Ask: "May I consult Chico to review the implementation?"
+   - Wait for user confirmation
+   - Mark as completed only after user confirms
 
 2. **Consult Chico**
    - Provide all code from Phase 3
@@ -29,6 +26,7 @@ Chico prevents: shipping bugs, missing requirements, code quality issues, testin
    - Bug identification
    - Code quality improvements
    - Edge cases
+   - **Chico adds todos for issues found** with [Chico] prefix
 
    Trust his fresh perspective.
 
@@ -48,17 +46,11 @@ Chico prevents: shipping bugs, missing requirements, code quality issues, testin
 
 6. **Do not claim completion until approved**
 
-7. **Phase Transition Protocol**
-   ```
-   WORKFLOW TRANSITION: REVIEW → VERIFY
-   - Gates cleared:
-     ✓ Asked permission to consult Chico
-     ✓ Chico reviewed all Phase 3 code
-     ✓ Fixed all identified issues
-     ✓ Re-review completed (if needed)
-     ✓ Implementation approved
-   - Waiting for: nothing
-   ```
+7. **Complete Phase 4**
+   - Mark "Phase 4: Review with Chico" as completed
+   - Mark "Get user approval to consult Zeppo" as in_progress
+   - Ask: "May I consult Zeppo for testing strategy?"
+   - Wait for user confirmation
 
 ## Critical Anti-Patterns
 

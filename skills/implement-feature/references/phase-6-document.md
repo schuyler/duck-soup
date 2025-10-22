@@ -10,11 +10,11 @@ Harpo prevents: undocumented features, stale docs, users unable to use new funct
 
 ## Protocol
 
-1. **GATE: Ask permission to consult Harpo**
-   ```
-   "May I consult Harpo to update documentation? I'll have him update:
-   - [List specific docs: README, API docs, user guides, etc.]"
-   ```
+1. **Get user approval to consult Harpo**
+   - Mark "Get user approval to consult Harpo" as in_progress
+   - Ask: "May I consult Harpo to update documentation?"
+   - Wait for user confirmation
+   - Mark as completed only after user confirms
 
 2. **Consult Harpo**
    - Provide complete implementation details
@@ -29,21 +29,18 @@ Harpo prevents: undocumented features, stale docs, users unable to use new funct
    - Code comments and docstrings
    - CHANGELOG entries
    - Architecture Decision Records (if needed)
+   - **Harpo adds todos for documentation tasks** with [Harpo] prefix
 
 4. **Ensure docs reflect changes accurately**
    - Verify documentation matches implementation
    - Check examples are correct
    - Ensure completeness
 
-5. **Phase Transition Protocol**
-   ```
-   WORKFLOW TRANSITION: DOCUMENT → REFLECT
-   - Gates cleared:
-     ✓ Asked permission to consult Harpo
-     ✓ Harpo updated all relevant documentation
-     ✓ Documentation accurately reflects changes
-   - Waiting for: nothing
-   ```
+5. **Complete Phase 6**
+   - Mark "Phase 6: Document with Harpo" as completed
+   - Mark "Get user approval to proceed to Phase 7" as in_progress
+   - Ask: "May I proceed to Phase 7: Reflection?"
+   - Wait for user confirmation
 
 ## Critical Anti-Patterns
 

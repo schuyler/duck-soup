@@ -34,18 +34,11 @@ Without clear requirements, you can't build the right thing. This prevents build
 5. **Store documentation links**
    If you fetch API docs or references, include them in REQUIREMENTS.md. These MUST be passed to Groucho in Phase 2.
 
-6. **Phase Transition Protocol**
-   ```
-   WORKFLOW TRANSITION: GATHER REQUIREMENTS → PLAN
-   - Gates cleared:
-     ✓ Asked clarifying questions
-     ✓ Confirmed understanding
-     ✓ Created session directory
-     ✓ Created REQUIREMENTS.md from template
-     ✓ Wrote complete requirements
-     ✓ Stored documentation links (if any)
-   - Waiting for: nothing
-   ```
+6. **Complete Phase 1 todos**
+   - Mark "Create session directory and REQUIREMENTS.md" as completed
+   - Mark "Phase 1: Gather requirements" as completed
+   - Mark "Get user approval to consult Groucho" as in_progress
+   - Ask user for approval to proceed to Phase 2
 
 ## Critical Anti-Patterns
 

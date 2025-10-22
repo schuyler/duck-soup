@@ -15,14 +15,18 @@ Step-by-step prevents: context overload, no course correction opportunity, overw
 - No "while I'm here" additions
 - Break down plan before starting
 
-## Step Execution Protocol
+## Step Execution Protocol with TodoWrite
 
 **MANDATORY for every step:**
 
-1. **Announce**: "Step [N]: [clear description]"
-2. **Perform ONLY that step's work** (no extras, no unrelated fixes)
-3. **End**: "Step [N] complete. Next: [description]. Proceed?"
-4. **STOP and wait** for confirmation
+1. **Create step todos** from the plan
+   - Add todos for each implementation step
+   - Use descriptive names (no step numbers)
+   - Keep max 50 lines per step
+2. **Mark current step in_progress**
+3. **Perform ONLY that step's work** (no extras, no unrelated fixes)
+4. **Mark step completed**
+5. **User can confirm or request changes** before next step
 
 Never write entire files in one response unless explicitly instructed.
 
@@ -53,18 +57,11 @@ Step 5: Add JWT token generation function (~40 lines)
 
 3. **Do NOT run tests (Phase 5) or update docs (Phase 6)**
 
-4. **Use Phase Transition Protocol**
-
-```
-WORKFLOW TRANSITION: IMPLEMENT → REVIEW
-- Gates cleared:
-     ✓ Completed all implementation steps
-     ✓ Each step confirmed by user
-     ✓ Created IMPLEMENTATION.md from template
-     ✓ Code comments added (if requested)
-     ✓ No testing or documentation mixed in
-- Waiting for: nothing
-```
+4. **Complete Phase 3**
+   - Mark "Phase 3: Implement" as completed
+   - Mark "Get user approval to consult Chico" as in_progress
+   - Ask: "May I consult Chico to review this implementation?"
+   - Wait for user confirmation
 
 ## Critical Anti-Patterns
 
@@ -79,7 +76,7 @@ Stay focused on current step. If you notice something else, propose it as a sepa
 ## Key Takeaways
 
 - One step = one logical unit (max 50 lines)
-- Always announce, perform, end with preview, wait
+- Always mark in_progress, perform, mark completed, wait for confirmation
 - No "while I'm here" additions
 - Break down plan before starting
 - Phase boundaries: code only, no testing or docs

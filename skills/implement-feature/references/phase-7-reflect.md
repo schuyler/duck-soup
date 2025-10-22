@@ -10,11 +10,11 @@ Session reflections identify instruction gaps, reveal project preferences, and e
 
 ## Protocol
 
-1. **GATE: Always suggest recording learnings**
-   ```
-   "Would you like me to record learnings from this session?
-   This helps identify instruction gaps over time."
-   ```
+1. **Get user approval to proceed to Phase 7**
+   - Mark "Get user approval to proceed to Phase 7" as in_progress
+   - Ask: "Would you like me to record learnings from this session?"
+   - Wait for user confirmation
+   - Mark as completed only after user confirms
 
 2. **If approved, read template and create REFLECTION.md**
    - Read `assets/REFLECTION.md` as a guide
@@ -25,7 +25,7 @@ Session reflections identify instruction gaps, reveal project preferences, and e
    - **Task Summary**: Brief description of what was accomplished
    - **User Corrections**: Each time user corrected you, explain reasoning and identify gap
    - **Project Preferences Revealed**: Patterns or preferences discovered
-   - **Gates Triggered**: Which gates were used during this session
+   - **Todos Completed**: Which todos were completed during this session
    - **Workflow Observations**: What worked well or needs improvement
 
 4. **Gap types for User Corrections**
@@ -34,15 +34,9 @@ Session reflections identify instruction gaps, reveal project preferences, and e
    - **clarity**: Instruction was misunderstood or ambiguous
    - **error**: No gap, you simply made an error
 
-5. **Phase Transition Protocol**
-   ```
-   WORKFLOW TRANSITION: REFLECT → COMPLETE
-   - Gates cleared:
-     ✓ Suggested recording learnings
-     ✓ Created REFLECTION.md from template (if approved)
-     ✓ Wrote reflection to REFLECTION.md
+5. **Complete Phase 7**
+   - Mark "Phase 7: Reflect on implementation" as completed
    - Session complete
-   ```
 
 ## Critical Anti-Patterns
 

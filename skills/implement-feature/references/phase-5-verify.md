@@ -10,13 +10,11 @@ Zeppo prevents: shipping untested code, missing edge cases, undiscovered bugs, n
 
 ## Protocol
 
-1. **GATE: Ask permission to consult Zeppo**
-   ```
-   "May I consult Zeppo to create a testing strategy? I'll have him:
-   - Review the implementation
-   - Create comprehensive test plan
-   - Identify edge cases and scenarios"
-   ```
+1. **Get user approval to consult Zeppo**
+   - Mark "Get user approval to consult Zeppo" as in_progress
+   - Ask: "May I consult Zeppo to create a testing strategy?"
+   - Wait for user confirmation
+   - Mark as completed only after user confirms
 
 2. **Consult Zeppo**
    - Provide complete implementation from Phase 3
@@ -28,6 +26,7 @@ Zeppo prevents: shipping untested code, missing edge cases, undiscovered bugs, n
    - Manual verification steps
    - Edge cases to test
    - Performance considerations
+   - **Zeppo adds todos for test tasks** with [Zeppo] prefix
 
 4. **Read template and create TESTING.md**
    - Read `assets/TESTING.md` as a guide
@@ -45,18 +44,11 @@ Zeppo prevents: shipping untested code, missing edge cases, undiscovered bugs, n
    - Address issues discovered
    - Ask if user wants to update TESTING.md with results
 
-7. **Phase Transition Protocol**
-   ```
-   WORKFLOW TRANSITION: VERIFY → DOCUMENT
-   - Gates cleared:
-     ✓ Asked permission to consult Zeppo
-     ✓ Received testing strategy
-     ✓ Created TESTING.md from template
-     ✓ Wrote verification plan to TESTING.md
-     ✓ Executed all tests
-     ✓ All tests passed
-   - Waiting for: nothing
-   ```
+7. **Complete Phase 5**
+   - Mark "Phase 5: Verify with Zeppo" as completed
+   - Mark "Get user approval to consult Harpo" as in_progress
+   - Ask: "May I consult Harpo for documentation?"
+   - Wait for user confirmation
 
 ## Critical Anti-Patterns
 

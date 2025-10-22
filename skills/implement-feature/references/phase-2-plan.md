@@ -10,14 +10,11 @@ Groucho prevents: reinventing solutions, inconsistent code structure, architectu
 
 ## Protocol
 
-1. **GATE: Ask permission to consult Groucho**
-   ```
-   "May I consult Groucho? I'll provide:
-   - Complete requirements from REQUIREMENTS.md
-   - [Documentation links from Phase 1]
-   - Technical constraints
-   - User preferences"
-   ```
+1. **Get user approval to consult Groucho**
+   - Mark "Get user approval to consult Groucho" as in_progress
+   - Ask: "May I consult Groucho? I'll provide requirements, docs, constraints, and preferences."
+   - Wait for user confirmation
+   - Mark as completed only after user confirms
 
 2. **Consult Groucho with ALL context**
    - Complete requirements
@@ -45,25 +42,14 @@ Groucho prevents: reinventing solutions, inconsistent code structure, architectu
    - Read `assets/PLAN.md` as a guide
    - Write complete plan to `docs/sessions/YYYYMMDD-HHMM-<slug>/PLAN.md`
 
-6. **GATE: Wait for user confirmation**
-   ```
-   "Please confirm this plan before I proceed to implementation."
-   ```
-   Do NOT proceed until user explicitly confirms.
-
-7. **Phase Transition Protocol**
-   ```
-   WORKFLOW TRANSITION: PLAN → IMPLEMENT
-   - Gates cleared:
-     ✓ Asked permission to consult Groucho
-     ✓ Consulted Groucho with complete context
-     ✓ Presented complete plan
-     ✓ Validated phase boundaries
-     ✓ Created PLAN.md from template
-     ✓ Wrote plan to PLAN.md
-     ✓ Received user confirmation
-   - Waiting for: nothing
-   ```
+6. **Get user approval to proceed to Phase 3**
+   - Mark "Get user approval to proceed to Phase 3" as in_progress
+   - Ask: "Please confirm this plan before I proceed to implementation."
+   - Wait for user confirmation
+   - Do NOT proceed until user explicitly confirms
+   - Mark as completed only after user confirms
+   - Mark "Phase 2: Plan implementation" as completed
+   - Expand Phase 3 with implementation step todos
 
 ## Critical Anti-Patterns
 
