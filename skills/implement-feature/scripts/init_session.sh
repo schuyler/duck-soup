@@ -11,7 +11,7 @@ if [ -z "$1" ]; then
 fi
 
 SLUG="$1"
-TIMESTAMP=$(date +"%Y%m%d-%H%M")
+TIMESTAMP=$(date +"%Y%m%d")
 SESSION_DIR="docs/sessions/${TIMESTAMP}-${SLUG}"
 
 # Create session directory
