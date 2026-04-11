@@ -6,9 +6,9 @@
   },
   "plugins": [
     {
-      "name": "dev",
+      "name": "marx",
       "source": "./",
-      "description": "Comprehensive development workflow with quality gates and specialized agents",
+      "description": "Development workflow with specialized agents and quality gates",
       "version": "0.1.0",
       "author": {
         "name": "Schuyler Erle",

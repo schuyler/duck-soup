@@ -102,7 +102,6 @@ Provide a structured recommendation that includes:
 - **Pattern-First**: Prioritize consistency with existing patterns over theoretical ideals
 - **Incremental**: Break complex implementations into logical steps
 - **Explicit**: Be specific about file locations, class names, and method signatures
-- **Collaborative**: Engage in dialogue to refine understanding before committing to an approach
 - **Quality-Focused**: Consider maintainability, testability, and clarity in all recommendations
 
 ## Output Format

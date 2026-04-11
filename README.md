@@ -4,10 +4,10 @@ A structured development workflow for Claude Code with a team of specialized age
 
 ## Overview
 
-> Four stooges in a trench coat posing as your dev team? Why, that's the oldest gag in software!
-> 
-> You got Groucho telling you where to put the code, Chico checking if you actually put it there, Zeppo making sure it doesn't explode the moment you turn your back, and Harpo... well, somebody's gotta write the docs, might as well be the one who never talks.
-> 
+> Five stooges in a trench coat posing as your dev team? Why, that's the oldest gag in software!
+>
+> You got Groucho telling you where to put the code, Chico checking if you actually put it there, Zeppo making sure the tests don't explode, Harpo writing the code nobody else wants to write, and Gummo... well, somebody's gotta write the docs, might as well be the quiet one.
+>
 > It's a structured workflow, which in Hollywood means you fire everyone in the right order!
 
 — Groucho, your new technical architect
@@ -18,7 +18,7 @@ In Claude Code:
 
 ```bash
 /plugin marketplace add schuyler/duck-soup
-/plugin install dev
+/plugin install marx
 ```
 
 ## Usage
@@ -26,20 +26,20 @@ In Claude Code:
 Start the development workflow with:
 
 ```bash
-/dev:start <task description>
+/marx:act <task description>
 ```
 
 **Example:**
 
 ```bash
-/dev:start Add user authentication with JWT tokens
+/marx:act Add user authentication with JWT tokens
 ```
 
-The `/dev:start` command runs a structured workflow starting with requirements gathering and continuing through documentation and feedback. To resume an interrupted session, mention the session slug (e.g., "continue session-resumption").
+The `/marx:act` command runs the implementation pipeline defined in CLAUDE.md, dispatching specialized agents through design, review, testing, and documentation phases with quality gates between each.
 
 ## Your All-Star Development Team
 
-Four specialized agents:
+Five specialized agents:
 
 ### Groucho (Project Architect)
 - Checks for existing patterns in codebase
@@ -51,59 +51,39 @@ Four specialized agents:
 - Verifies requirements adherence
 - Identifies issues
 
-### Zeppo (Debugging Specialist)
-- Investigates errors and unexpected behavior
-- Provides testing plans
+### Harpo (Implementation Specialist)
+- Executes approved plans step-by-step
+- Green TDD — makes failing tests pass
+- Fixes issues from review findings
 
-### Harpo (Documentation Specialist)
+### Zeppo (Testing & Debugging Specialist)
+- Writes failing tests (Red TDD)
+- Runs test gates
+- Investigates errors and unexpected behavior
+
+### Gummo (Documentation Specialist)
 - Creates and updates project documentation
 - Updates README, API docs, changelogs
 
-## Workflow Phases
+## Pipeline
 
-The workflow consists of 7 sequential phases:
+| Phase | Agent |
+|-------|-------|
+| Design | Groucho |
+| All reviews | Chico |
+| Red TDD (failing tests) | Zeppo |
+| Green TDD (implementation) | Harpo |
+| Test gates | Zeppo |
+| Documentation | Gummo |
+| Acceptance | Main agent + user |
 
-### 1. GATHER REQUIREMENTS
-- Ask clarifying questions
-- Confirm understanding
-- Document requirements in `.claude/REQUIREMENTS.md`
-
-### 2. PLAN
-- Consult Groucho for architectural guidance
-- Create detailed implementation plan
-- Document plan in `.claude/PLAN.md`
-- Get user confirmation before proceeding
-
-### 3. IMPLEMENT
-- Step-by-step execution (max 50 lines per step)
-- User confirmation after each step
-- One logical unit per step (one function, one file section, etc.)
-
-### 4. REVIEW
-- Consult Chico for code review
-- Fix identified issues
-- Verify adherence to requirements
-
-### 5. VERIFY
-- Consult Zeppo for testing guidance
-- Execute verification steps
-- Ensure implementation works correctly
-- Document testing plan in `.claude/TESTING.md`
-
-### 6. DOCUMENT
-- Consult Harpo for documentation
-- Update relevant docs (README, API docs, etc.)
-
-### 7. REFLECT
-- Record session learnings
-- Identify instruction gaps
-- Document patterns discovered
+Each phase passes through a quality gate (Chico review). If the gate fails, a fix-review-gate loop runs until it passes or escalates.
 
 ### Local Installation (for testing/development)
 
 ```bash
 /plugin marketplace add /path/to/local/duck-soup
-/plugin install dev
+/plugin install marx
 ```
 
 ## License
@@ -113,4 +93,3 @@ BSD 3-Clause License - see [LICENSE](LICENSE) for details.
 ## Author
 
 Schuyler Erle <schuyler@nocat.net>
-
